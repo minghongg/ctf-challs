@@ -1,0 +1,20 @@
+version: '3'
+services:
+    node:
+        restart: always
+        build: .
+        container_name : 'flowerium_node'
+        ports:
+            - 11000:11000
+    mongo:
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME=root
+            - MONGO_INITDB_ROOT_PASSWORD=SpRn3yUVe6ELY96UAA8MfdF
+        image: mongo
+        container_name : 'flowerium_mongo'
+        expose:
+            - "27017"
+        volumes:
+            - ./mongo-entrypoint:/docker-entrypoint-initdb.d/
+volumes:
+    mongodb:

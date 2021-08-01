@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,700,900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/upload.css" />
+
+    <title>Nature Photography Contest</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <a href="/" class="navbar-brand">Nature Photography Contest</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <% if(!isAuthenticated){ %>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link mr-3">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/register" class="nav-link">Register</a>
+                </li>
+                <% } else { %>
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Logout</a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <div class="content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 mb-5 mb-lg-0">
+                            <h2 class="mb-5">
+                                Fill the form. <br />
+                                It's easy.
+                            </h2>
+
+                            
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" name="fname" id="firstName"
+                                            placeholder="First name" />
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input type="text" class="form-control" name="lname" id="lastName"
+                                            placeholder="Last name" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input type="text" class="form-control" name="email" id="email"
+                                            placeholder="Email" />
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 mt-1 form-group">
+                                        <input type="text" class="form-control" name="link" id="link"
+                                            placeholder="Link" />
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 mt-3">
+                                        <input type="submit" id="submit" value="Send Link"
+                                            class="btn btn-primary rounded-0 py-2 px-4" />
+                                        <span class="submitting"></span>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                        <div class="col-lg-4 ml-auto">
+                            <h3 class="mb-4">Nature Photography Contest</h3>
+                            <p>
+                                To enter the contest, all you need to do is upload your best
+                                nature photograph to
+                                <a href="https://imgur.com">https://imgur.com/</a>. After
+                                upload, get the share links of your photograph and send the
+                                link to <b>admin@npc.id</b> by filling out the form. Winners
+                                will be announced tommorow.
+                            </p>
+                            <p><a href="#">Read more</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/upload.js"></script>
+</body>
+
+</html>

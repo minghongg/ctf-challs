@@ -1,0 +1,4 @@
+node_modules
+mongo-entrypoint
+docker-compose.yml
+dockerfile

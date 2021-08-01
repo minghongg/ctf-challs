@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Photography Contest</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/updateProfile.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar content -->
+        <a href="/" class="navbar-brand">Nature Photography Contest</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <% if(!isAuthenticated){ %>
+                <li class="nav-item">
+                    <a href="/login" class="nav-link mr-3">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/register" class="nav-link">Register</a>
+                </li>
+                <% } else { %>
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/logout" class="nav-link">Logout</a>
+                </li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <div class="wrapper bg-white mt-sm-5" style="margin-top: 10rem!important;">
+        <h4 class="pb-4 border-bottom">Account settings</h4>
+        <div class="py-2">
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="firstname">First Name</label> <input type="text" id ="firstName" name="firstName" class="bg-light form-control" value=""> </div>
+                <div class="col-md-6 pt-md-0 pt-3"> <label for="lastname">Last Name</label> <input type="text" id ="lastName" name="lastName" class="bg-light form-control" value=""> </div>
+            </div>
+            <div class="row py-2">
+                <div class="col-md-6"> <label for="email">Email Address</label> <input type="text" id ="email" name="email" class="bg-light form-control" value=""> </div>
+                <div class="col-md-6 pt-md-0 pt-3"> <label for="aboutme">About me</label> <input type="text" id ="aboutMe" name="aboutMe" class="bg-light form-control" value=""> </div>
+            </div>
+            <div class="py-3 pb-4 border-bottom"> <button class="btn btn-primary mr-3" id="submit">Save Changes</button> 
+            
+        </div>
+    </div>
+    <div class="d-sm-flex align-items-center pt-3" id="deactivate">
+        <div> <b>Deactivate your account</b>
+            <p>This action is not reversible!</p>
+        </div>
+        <div class="ml-auto"> <button class="btn danger">Deactivate</button> </div>
+    </div>
+</body>
+
+</html>

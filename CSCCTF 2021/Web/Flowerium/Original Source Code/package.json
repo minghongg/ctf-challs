@@ -1,0 +1,26 @@
+{
+  "name": "flowerium",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Chevaliers",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "express-validator": "^6.11.1",
+    "graphql": "^15.5.0",
+    "graphql-disable-introspection": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^5.12.13",
+    "nodemon": "^2.0.7",
+    "validator": "^13.6.0"
+  }
+}

@@ -1,0 +1,15 @@
+FROM node:10.19.0
+
+RUN useradd -u 9999 chevaliers
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+CMD [ "node", "app.js" ]
+
+USER chevaliers

@@ -1,0 +1,17 @@
+FROM php:apache
+
+RUN mkdir -p /var/www/e9582/public_html/
+
+COPY flag /var/www/e9582/flag
+
+COPY index.php /var/www/e9582/public_html/index.php
+
+COPY 000-default.conf /etc/apache2/sites-available/000-default.conf
+
+COPY start-apache /usr/local/bin
+
+RUN a2enmod rewrite
+
+RUN chmod 755 /usr/local/bin/start-apache
+
+CMD ["start-apache"]
